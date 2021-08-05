@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+CurcularStd-Book has been assumed as regular weight because there is no thinner one in font websites.
+The font family I found online looks a bit thicker than it looks in the design.
+*/
+@layer base {
+    @font-face {
+        font-family: "Circular Std Book";
+        font-weight: 450;
+        src: url("/fonts/circular-std/CircularStd-Book.ttf") format("ttf"),
+        url("/fonts/circular-std/CircularStd-Book.woff2") format("woff2"),
+        url("/fonts/circular-std/CircularStd-Book.woff") format("woff");
+    }
+
+    @font-face {
+        font-family: "Circular Std Book";
+        font-weight: 500;
+        src: url("/fonts/circular-std/CircularStd-Medium.ttf") format("ttf"),
+        url("/fonts/circular-std/CircularStd-Medium.woff2") format("woff2"),
+        url("/fonts/circular-std/CircularStd-Medium.woff") format("woff");
+    }
+
+    @font-face {
+        font-family: "Circular Std Book";
+        font-weight: 700;
+        src: url("/fonts/circular-std/CircularStd-Bold.ttf") format("ttf"),
+        url("/fonts/circular-std/CircularStd-Bold.woff2") format("woff2"),
+        url("/fonts/circular-std/CircularStd-Bold.woff") format("woff");
+    }
+}
+
+body {
+    @apply font-circular font-normal m-0 p-0;
+}
