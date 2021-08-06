@@ -1,6 +1,7 @@
 <template>
   <div id="wrapper">
 
+    <!-- Header -->
     <header class="py-8 bg-gray-950">
       <div class="container">
         <div class="grid grid-cols-12 items-center">
@@ -50,14 +51,116 @@
       </div>
     </header>
 
+    <!-- Main -->
     <main>
       <RouterView/>
     </main>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="mt-32">
+      <div class="container">
+        <!-- Columns -->
+        <div class="grid grid-cols-12 gap-20">
+          <div class="col-span-3">
+            <svg class="w-9 h-9">
+              <use xlink:href="#logo-symbol"></use>
+            </svg>
+            <p class="text-sm text-gray-500 mt-6">Open an account in minutes, get full Control for much longer.</p>
+          </div>
 
+          <div class="col-span-2">
+            <h4 class="text-gray-900 text-2xl mb-6">Company</h4>
+            <ul class="grid gap-2">
+              <li>
+                <RouterLink :to="{hash: '#'}" class="text-gray-700 text-lg hover:text-orange-500">About</RouterLink>
+              </li>
+              <li>
+                <RouterLink :to="{hash: '#'}" class="text-gray-700 text-lg hover:text-orange-500">Careers</RouterLink>
+              </li>
+              <li>
+                <RouterLink :to="{hash: '#'}" class="text-gray-700 text-lg hover:text-orange-500">Mobile</RouterLink>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-span-2">
+            <h4 class="text-gray-900 text-2xl mb-6">Contact</h4>
+            <ul class="grid gap-2">
+              <li>
+                <RouterLink :to="{hash: '#'}" class="text-gray-700 text-lg hover:text-orange-500">Help/FAQ</RouterLink>
+              </li>
+              <li>
+                <RouterLink :to="{hash: '#'}" class="text-gray-700 text-lg hover:text-orange-500">Press</RouterLink>
+              </li>
+              <li>
+                <RouterLink :to="{hash: '#'}" class="text-gray-700 text-lg hover:text-orange-500">Affiliates</RouterLink>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-span-2">
+            <h4 class="text-gray-900 text-2xl mb-6">More</h4>
+            <ul class="grid gap-2">
+              <li>
+                <RouterLink :to="{hash: '#'}" class="text-gray-700 text-lg hover:text-orange-500">Airline fees</RouterLink>
+              </li>
+              <li>
+                <RouterLink :to="{hash: '#'}" class="text-gray-700 text-lg hover:text-orange-500">Airlines</RouterLink>
+              </li>
+              <li>
+                <RouterLink :to="{hash: '#'}" class="text-gray-700 text-lg hover:text-orange-500">Low fare tips</RouterLink>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-span-3">
+            <h4 class="text-gray-900 text-2xl mb-3">Discover Our App</h4>
+            <div class="flex items-center mb-5">
+              <RouterLink :to="{hash: '#'}" class="mr-3">
+                <svg class="w-28 h-12">
+                  <use xlink:href="#google-play"></use>
+                </svg>
+              </RouterLink>
+              <RouterLink :to="{hash: '#'}">
+                <svg class="w-28 h-12">
+                  <use xlink:href="#apple-store"></use>
+                </svg>
+              </RouterLink>
+            </div>
+            <ul class="grid grid-flow-col auto-cols-max gap-6">
+              <li>
+                <RouterLink :to="{hash: '#'}" class="inline-flex items-center justify-center w-12 h-12 border border-orange-500 rounded-full text-orange-500 hover:bg-orange-500 hover:text-white transition duration-200 ease-in-out">
+                  <svg class="w-4 h-4">
+                    <use xlink:href="#facebook"></use>
+                  </svg>
+                </RouterLink>
+              </li>
+              <li>
+                <RouterLink :to="{hash: '#'}" class="inline-flex items-center justify-center w-12 h-12 border border-orange-500 rounded-full text-orange-500 hover:bg-orange-500 hover:text-white transition duration-200 ease-in-out">
+                  <svg class="w-4 h-4">
+                    <use xlink:href="#instagram"></use>
+                  </svg>
+                </RouterLink>
+              </li>
+              <li>
+                <RouterLink :to="{hash: '#'}" class="inline-flex items-center justify-center w-12 h-12 border border-orange-500 rounded-full text-orange-500 hover:bg-orange-500 hover:text-white transition duration-200 ease-in-out">
+                  <svg class="w-4 h-4">
+                    <use xlink:href="#twitter"></use>
+                  </svg>
+                </RouterLink>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-300 mt-20 py-5 text-center text-gray-700">
+          All rights reserved Hitmarker
+        </div>
+      </div>
     </footer>
 
+    <!-- SVG library -->
     <SVGLib/>
   </div>
 </template>
